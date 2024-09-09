@@ -1,0 +1,15 @@
+<svg width="50" height="386" viewBox="0 0 50 386" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="26.5" y1="6" x2="26.5" y2="386" stroke="#34A18C" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="1" y="113" width="48" height="48" rx="24" fill="white"/>
+<rect x="1" y="113" width="48" height="48" rx="24" stroke="#34A18C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7"/>
+<circle cx="25" cy="137" r="18" fill="#02040F"/>
+<rect x="1" y="225" width="48" height="48" rx="24" fill="white"/>
+<rect x="1" y="225" width="48" height="48" rx="24" stroke="#34A18C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7"/>
+<circle cx="25" cy="249" r="18" fill="#02040F"/>
+<rect x="1" y="337" width="48" height="48" rx="24" fill="white"/>
+<rect x="1" y="337" width="48" height="48" rx="24" stroke="#34A18C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7"/>
+<circle cx="25" cy="361" r="18" fill="#02040F"/>
+<rect x="1" y="1" width="48" height="48" rx="24" fill="#FDFFFC"/>
+<rect x="1" y="1" width="48" height="48" rx="24" stroke="#34A18C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7"/>
+<circle cx="25" cy="25" r="18" fill="#02040F"/>
+</svg>
