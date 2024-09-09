@@ -1,16 +1,28 @@
+"use client"
+
 import React from "react";
+import { motion } from "framer-motion";
 import Navbar from "../_components/Navbar";
 import JeffImage from "/public/assests/jeff pics.png";
 import Twitter from "/public/assests/Frame 3527.png";
 import Instagram from "/public/assests/Group 3459.png";
 import Linkedin from "/public/assests/Frame 3528.png";
-import Client from "/public/assests/Group 3468.svg"
+import Client from "/public/assests/Group 3468.svg";
 import Image from "next/image";
+
+const scrollAnimation = {
+	hidden: { opacity: 0, y: 100 },
+	visible: { opacity: 1, y: 0 },
+};
 
 const Page = () => {
 	return (
 		<div>
-			<div
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
 				className="relative mx-auto min-h-[158px] rounded-b-[16px] bg-primary text-center
 					lg:min-h-[290px] lg:rounded-b-[32px]"
 			>
@@ -33,9 +45,15 @@ const Page = () => {
 				>
 					Where Creativity meets Innovation
 				</p>
-			</div>
+			</motion.div>
 			<Navbar />
-			<div className="mt-[45px] px-[16px] lg:px-[159px]">
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="mt-[45px] px-[16px] lg:px-[159px]"
+			>
 				<h1 className="font-space_grotesk text-[40px] font-[700] lg:text-[64px]">About Us.</h1>
 				<div
 					className="space-y-[47px] font-dm_sans text-[18px] font-[300] lg:space-y-[38px]
@@ -57,7 +75,7 @@ const Page = () => {
 						leaders.
 					</p>
 				</div>
-			</div>
+			</motion.div>
 			<div
 				className="mt-[50px] max-h-[772px] rounded-[16px] bg-secondaryLight px-[16px] py-[24px]
 					lg:mt-[34px] lg:max-h-[679px] lg:rounded-[32px] lg:px-[160px] lg:py-[92px]"
@@ -110,7 +128,13 @@ const Page = () => {
 					</div>
 				</div>
 			</div>
-			<div className="mt-[61px] lg:px-[159px] pl-[15px] pr-[12px] lg:mt-[79px]">
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="mt-[61px] pl-[15px] pr-[12px] lg:mt-[79px] lg:px-[159px]"
+			>
 				<p className="font-dm_sans text-[18px] font-normal lg:text-[32px]">
 					<span className="font-[900] text-secondary">JEKO DESIGN STUDIO </span> is a creative hub
 					where innovative design meets strategic thinking. Founded on the principles of quality,
@@ -120,23 +144,27 @@ const Page = () => {
 					branding, web design, or custom illustrations, JEKO DESIGN STUDIO is committed to delivering
 					exceptional results that elevate brands to new heights.
 				</p>
-			</div>
-			<div
-				className="mt-[35px] h-full lg:min-h-[566px] rounded-t-[32px] bg-primary lg:mt-[81px] py-[23px] lg:py-[60px] pl-[16px] pr-[16px]
-					lg:pl-[160px] lg:pr-[133px]"
+			</motion.div>
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="mt-[35px] h-full rounded-t-[32px] bg-primary py-[23px] pl-[16px] pr-[16px]
+					lg:mt-[81px] lg:min-h-[566px] lg:py-[60px] lg:pl-[160px] lg:pr-[133px]"
 			>
 				<div className="flex flex-col justify-between lg:flex-row lg:items-center">
 					<h2 className="font-space_grotesk text-[40px] font-[700] text-white lg:text-[64px]">
 						Past Clients.
 					</h2>
-					<p className="font-dm_sans text-[14px]  pr-[100px] font-medium text-white lg:text-[20px]">
+					<p className="pr-[100px] font-dm_sans text-[14px] font-medium text-white lg:text-[20px]">
 						Proudly partnered with brands that trust in the power of design
 					</p>
 				</div>
-        <div className="">
-          <Image src={Client} alt="past clients"/>
-        </div>
-			</div>
+				<div className="">
+					<Image src={Client} alt="past clients" />
+				</div>
+			</motion.div>
 		</div>
 	);
 };

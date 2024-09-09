@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Logo from "/public/assests/JEKO LOGO.png";
 import ScrollImage from "/public/assests/scroll.png";
 import DesktopScrollImage from "/public/assests/Frame 3521.png";
@@ -17,6 +20,7 @@ import Navbar from "./_components/Navbar";
 import Button from "@/constants/atoms/button";
 import Marquee from "react-fast-marquee";
 import StarIcon from "@/constants/icons/StarIcon";
+import { ReactTyped } from "react-typed";
 
 const services = [
 	{ title: "UI/UX Design", image: UI, arrowImage: ArrowImage },
@@ -35,12 +39,22 @@ const marqueeItems = [
 	"Framer",
 ];
 
+const scrollAnimation = {
+	hidden: { opacity: 0, y: 100 },
+	visible: { opacity: 1, y: 0 },
+};
+
 export default function Home() {
 	return (
 		<div>
-			<div
+			<motion.div
 				className="relative mx-auto min-h-[250px] rounded-b-[32px] bg-primary text-center
 					lg:min-h-[522px]"
+				initial="hidden"
+				whileInView="visible"
+				
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
 			>
 				<div className="px-[38px] pt-[59px]">
 					<div
@@ -70,18 +84,26 @@ export default function Home() {
 				<div className="absolute left-0 right-0 top-[31rem] mx-auto hidden size-[54px] lg:block">
 					<Image src={DesktopScrollImage} alt="scroll" />
 				</div>
-			</div>
+			</motion.div>
 			<Navbar />
-			<section className="">
+			<motion.div initial="hidden"
+				whileInView="visible"
+				
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation} className="">
 				<div className="flex flex-col items-start lg:flex-row">
 					<div className="mt-[18px] px-[16px] lg:mt-[36.5px] xl:px-0 xl:pl-[160px]">
 						<div className="leading-[40px] lg:leading-[72px]">
 							<h2 className="max-w-[457px] font-space_grotesk text-[40px] font-[700] lg:text-[64px]">
 								Hello,
 							</h2>
-							<h2 className="max-w-[457px] font-space_grotesk text-[40px] font-[700] lg:text-[64px]">
-								I’m Jeffery!
-							</h2>
+							<ReactTyped
+								strings={["I’m Jeffery!"]}
+								typeSpeed={120}
+								backSpeed={140}
+								loop
+								className="max-w-[457px] font-space_grotesk text-[40px] font-[700] lg:text-[64px]"
+							/>
 						</div>
 						<p
 							className="mt-[11px] font-dm_sans text-[20px] font-medium lg:mt-[26px] lg:text-[32px]
@@ -129,9 +151,14 @@ export default function Home() {
 						<Image src={JeffImage} alt="Jeff picture" />
 					</div>
 				</div>
-			</section>
+			</motion.div>
 
-			<section
+			<motion.div
+			initial="hidden"
+			whileInView="visible"
+			
+			transition={{ duration: 0.8 }}
+			variants={scrollAnimation}
 				className="min-h-[1354px] rounded-[16px] bg-secondaryLight px-[16px] py-[24px] lg:min-h-[785px]
 					lg:rounded-[32px] lg:px-[160px] lg:py-[92px]"
 			>
@@ -180,9 +207,13 @@ export default function Home() {
 						</div>
 					))}
 				</div>
-			</section>
+			</motion.div>
 
-			<section className="px-[18px] py-[41px] lg:px-[168px]">
+			<motion.div initial="hidden"
+				whileInView="visible"
+				
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation} className="px-[18px] py-[41px] lg:px-[168px]">
 				<div className="flex flex-col gap-[11.98px] lg:flex-row">
 					<div>
 						<p className="font-dm_sans text-[20px] font-medium text-primary lg:text-[32px]">
@@ -276,7 +307,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</motion.div>
 
 			<section className="w-full overflow-hidden">
 				<div
