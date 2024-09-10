@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import Logo from "/public/assests/JEKO LOGO2.png";
+import Logo from "/public/assests/JEKO LOGO (1).svg";
 import Button from "@/constants/atoms/button";
 import HamburgerIcon from "@/constants/icons/Hamburger";
 import CloseIcon from "@/constants/icons/CloseIcon"; // You can add a close icon
@@ -35,15 +35,13 @@ const Navbar = () => {
 		<div className="mt-[36px] px-[16px] lg:mt-[60.5px] xl:px-[160px]">
 			<div className="flex items-center justify-between">
 				{/* Logo and Title */}
-				<div className="flex items-center gap-[13px]">
+				<div>
 					<Image
 						src={Logo}
 						alt="logo"
-						className="h-[20px] w-[28.7px] lg:h-[27.51px] lg:w-[39.57px]"
+						className="h-[16.46px] w-[73.13px] lg:h-[28.81px] lg:w-[128px]"
 					/>
-					<h1 className="font-space_grotesk text-[12px] font-medium text-secondaryLight lg:text-[24px]">
-						Jeffery Nwankwo .K.
-					</h1>
+					
 				</div>
 
 				{/* Desktop Navigation */}
@@ -62,7 +60,7 @@ const Navbar = () => {
 							))}
 						</ul>
 					</nav>
-					<Button className="px-[21.03px]" text="View Portfolio" withArrow variant="primary" />
+					<Button onClick={() => router.push("/portfolio")} className="px-[21.03px]" text="View Portfolio" withArrow variant="primary" />
 				</div>
 
 				{/* Mobile Menu Button */}
@@ -79,7 +77,7 @@ const Navbar = () => {
 						<Image
 							src={Logo}
 							alt="logo"
-							className="h-[20px] w-[28.7px] lg:h-[27.51px] lg:w-[39.57px]"
+							className="h-[20px] w-[28.7px]"
 						/>
 					</div>
 
@@ -102,7 +100,7 @@ const Navbar = () => {
 
 					{/* View Portfolio Button */}
 					<div className="mt-[26px]">
-						<Button className="px-[21.03px] text-[10px]" text="View Portfolio" withArrow variant="primary" />
+						<Button  onClick={() => router.push("/portfolio")}  className="px-[21.03px] text-[10px]" text="View Portfolio" withArrow variant="primary" />
 					</div>
 				</div>
 			)}

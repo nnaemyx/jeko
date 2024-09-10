@@ -147,7 +147,7 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-					<div className="-mt-[5rem] max-w-[704px] lg:-mt-[10rem]">
+					<div className="-mt-[5rem] -z-10 max-w-[704px] lg:-mt-[10rem]">
 						<Image src={JeffImage} alt="Jeff picture" />
 					</div>
 				</div>
