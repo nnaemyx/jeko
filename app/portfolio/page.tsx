@@ -216,12 +216,12 @@ const Page = () => {
 						</div>
 					</div>
 				</div>
-				<div className="lg:mt-[35px] mt-[23px] ">
+				<div className="mt-[23px] lg:mt-[35px]">
 					<Button
 						withArrow
 						text="See more logo and branding"
-						className="px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
-							 lg:px-[26.03px] lg:py-[13.5px] mx-auto lg:text-[16px]"
+						className="mx-auto px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
+							lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
 					/>
 				</div>
 			</motion.div>

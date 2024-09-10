@@ -41,7 +41,6 @@ const Navbar = () => {
 						alt="logo"
 						className="h-[16.46px] w-[73.13px] lg:h-[28.81px] lg:w-[128px]"
 					/>
-					
 				</div>
 
 				{/* Desktop Navigation */}
@@ -60,7 +59,13 @@ const Navbar = () => {
 							))}
 						</ul>
 					</nav>
-					<Button onClick={() => router.push("/portfolio")} className="px-[21.03px]" text="View Portfolio" withArrow variant="primary" />
+					<Button
+						onClick={() => router.push("/portfolio")}
+						className="px-[21.03px]"
+						text="View Portfolio"
+						withArrow
+						variant="primary"
+					/>
 				</div>
 
 				{/* Mobile Menu Button */}
@@ -71,14 +76,13 @@ const Navbar = () => {
 
 			{/* Mobile Menu */}
 			{isMobileMenuOpen && (
-				<div className="fixed inset-0 z-50 top-0 right-0 w-[212px] h-[305px] px-[29px] flex flex-col bg-white shadow-md">
+				<div
+					className="fixed inset-0 right-0 top-0 z-50 flex h-[305px] w-[212px] flex-col bg-white
+						px-[29px] shadow-md"
+				>
 					{/* Logo */}
 					<div className="mt-[17px]">
-						<Image
-							src={Logo}
-							alt="logo"
-							className="h-[20px] w-[28.7px]"
-						/>
+						<Image src={Logo} alt="logo" className="h-[20px] w-[28.7px]" />
 					</div>
 
 					{/* Navigation Links */}
@@ -100,7 +104,13 @@ const Navbar = () => {
 
 					{/* View Portfolio Button */}
 					<div className="mt-[26px]">
-						<Button  onClick={() => router.push("/portfolio")}  className="px-[21.03px] text-[10px]" text="View Portfolio" withArrow variant="primary" />
+						<Button
+							onClick={() => router.push("/portfolio")}
+							className="px-[21.03px] text-[10px]"
+							text="View Portfolio"
+							withArrow
+							variant="primary"
+						/>
 					</div>
 				</div>
 			)}
