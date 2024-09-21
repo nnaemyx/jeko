@@ -10,6 +10,12 @@ import DesktopManverickimage from "/public/assests/maverickdesktop.svg";
 import Manverickimage from "/public/assests/MAV LAYMOCK 2.svg";
 import DesktopInstagram from "/public/assests/Instagram Post Mockup Mosaic UV 1.svg";
 import Instagram from "/public/assests/Instagram Post Mockup Mosaic UV 1 (1).svg";
+import Flyers from "/public/assests/Frame 3500.svg";
+import Website1 from "/public/assests/website2.svg";
+import Website2 from "/public/assests/OWINKS1 copy 1.svg";
+import Packaging from "/public/assests/Frame 3505.svg";
+import Music from "../_components/portfolio/Music";
+import Business from "../_components/portfolio/Business";
 
 const scrollAnimation = {
 	hidden: { opacity: 0, y: 100 },
@@ -24,10 +30,10 @@ const Page = () => {
 				whileInView="visible"
 				transition={{ duration: 0.8 }}
 				variants={scrollAnimation}
-				className="relative mx-auto min-h-[158px] rounded-b-[16px] bg-primary text-center
-					lg:min-h-[290px] lg:rounded-b-[32px]"
+				className="relative mx-auto min-h-[228px] rounded-b-[16px] bg-primary lg:min-h-[290px]
+					lg:rounded-b-[32px]"
 			>
-				<div className="px-[38px] pt-[59px]">
+				<div className="px-[38px] pt-[59px] text-center">
 					<div
 						className="mx-auto max-w-[875px] rounded-[6px] border border-solid border-white/[12%]
 							bg-white/[1%] lg:rounded-[16px] lg:py-[17px]"
@@ -41,8 +47,9 @@ const Page = () => {
 					</div>
 				</div>
 				<p
-					className="mt-[16.69px] font-space_grotesk leading-[20px] text-white lg:mt-[43px]
-						lg:text-[64px]"
+					className="mt-[34px] w-[351px] pl-[37px] pr-[72px] text-left font-space_grotesk text-[40px]
+						font-[700] leading-[40px] text-white lg:mt-[43px] lg:w-auto lg:pl-0 lg:pr-0
+						lg:text-center lg:text-[64px]"
 				>
 					Welcome to my Portfolio
 				</p>
@@ -169,7 +176,7 @@ const Page = () => {
 						</div>
 						<div className="w-full">
 							<Image src={DesktopManverickimage} alt="maverick logo" className="hidden lg:flex" />
-							<Image src={Manverickimage} alt="maverick logo" />
+							<Image src={Manverickimage} alt="maverick logo" className="flex lg:hidden" />
 						</div>
 					</div>
 					<div
@@ -212,7 +219,7 @@ const Page = () => {
 						</div>
 						<div className="w-full">
 							<Image src={DesktopInstagram} alt="maverick logo" className="hidden lg:flex" />
-							<Image src={Instagram} alt="maverick logo" />
+							<Image src={Instagram} alt="maverick logo" className="flex lg:hidden" />
 						</div>
 					</div>
 				</div>
@@ -224,6 +231,172 @@ const Page = () => {
 							lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
 					/>
 				</div>
+			</motion.div>
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="mt-[55px] lg:mt-[81px]"
+			>
+				<h2
+					className="px-[16px] font-space_grotesk text-[40px] font-[700] lg:pl-[158px] lg:pr-0
+						lg:text-[64px]"
+				>
+					Flyers
+				</h2>
+				<div className="px-[16px] lg:px-0">
+					<Image src={Flyers} alt="flyers" />
+				</div>
+				<div className="mt-[26px] lg:mt-[62px]">
+					<Button
+						withArrow
+						text="See more Flyers"
+						className="mx-auto px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
+							lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
+					/>
+				</div>
+			</motion.div>
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="mt-[52px] lg:mt-[86px]"
+			>
+				<h2 className="pl-[16px] font-space_grotesk text-[40px] font-bold lg:pl-[158px] lg:text-[64px]">
+					Websites
+				</h2>
+				<div className="flex flex-col space-y-[44px]">
+					<div>
+						<div className="lg:px-[160px]">
+							<Image src={Website1} alt="Website 1" />
+						</div>
+						<div
+							className="-mt-12 hidden w-full flex-col font-dm_sans lg:flex lg:flex-row
+								lg:items-center lg:justify-center lg:gap-[113px] lg:pl-[160px] lg:pr-[135px]"
+						>
+							<div className="lg:text-[24px]">
+								<p>Client: VeriPay Fx </p>
+								<p>Industry: FinTech</p>
+							</div>
+							<div className="lg:text-[24px]">
+								<p>Job done: Fully functional and responsive </p>
+								<p>website design and development</p>
+							</div>
+							<Button
+								className="px-[43.5px] py-[13.5px]"
+								withArrow
+								text="View live site"
+								variant="primary"
+							/>
+						</div>
+						<div className="block px-[16px] lg:hidden">
+							<div className="flex justify-between">
+								<div>
+									<p>Client: VeriPay Fx </p>
+									<p>Industry: FinTech</p>
+								</div>
+								<Button
+									className="px-[18.69px] py-[7px] text-[10px]"
+									withArrow
+									text="View live site"
+									variant="primary"
+								/>
+							</div>
+							<div className="mt-[16px]">
+								<p>Job done: Fully functional and responsive </p>
+								<p>website design and development</p>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div className="lg:px-[160px]">
+							<Image src={Website2} alt="Website 1" />
+						</div>
+						<div
+							className="-mt-12 hidden w-full flex-col items-center justify-center gap-[113px]
+								font-dm_sans lg:flex lg:flex-row lg:pl-[160px] lg:pr-[135px]"
+						>
+							<div className="lg:text-[24px]">
+								<p>Client: VeriPay Fx </p>
+								<p>Industry: FinTech</p>
+							</div>
+							<div className="lg:text-[24px]">
+								<p>Job done: Fully functional and responsive </p>
+								<p>website design and development</p>
+							</div>
+							<Button
+								className="px-[43.5px] py-[13.5px]"
+								withArrow
+								text="View live site"
+								variant="primary"
+							/>
+						</div>
+						<div className="block px-[16px] lg:hidden">
+							<div className="flex justify-between">
+								<div>
+									<p>Client: VeriPay Fx </p>
+									<p>Industry: FinTech</p>
+								</div>
+								<Button
+									className="px-[18.69px] py-[7px] text-[10px]"
+									withArrow
+									text="View live site"
+									variant="primary"
+								/>
+							</div>
+							<div className="mt-[16px]">
+								<p>Job done: Fully functional and responsive </p>
+								<p>website design and development</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</motion.div>
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="mt-[54px] lg:mt-[86px]"
+			>
+				<h2
+					className="pl-[16px] font-space_grotesk text-[40px] font-bold leading-[40px] lg:pl-[158px]
+						lg:text-[64px] lg:leading-none"
+				>
+					Product design and packaging
+				</h2>
+				<div className="mt-[20px] lg:mt-[58px]">
+					<Image src={Packaging} alt="packaging image" />
+				</div>
+				<div className="mt-[23px] lg:mt-[62px]">
+					<Button
+						withArrow
+						text="See more Packaging designs"
+						className="mx-auto px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
+							lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
+					/>
+				</div>
+			</motion.div>
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="lg:mt-[86px] mt-[54px]"
+			>
+				<Music />
+			</motion.div>
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="lg:mt-[86px] mt-[54px]"
+			>
+				<Business />
 			</motion.div>
 		</div>
 	);
