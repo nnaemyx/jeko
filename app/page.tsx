@@ -21,14 +21,25 @@ import Button from "@/constants/atoms/button";
 import Marquee from "react-fast-marquee";
 import StarIcon from "@/constants/icons/StarIcon";
 import { ReactTyped } from "react-typed";
+import ClientScroll from "../components/Homepage/ClientScroll";
+import Reviews from "../components/Homepage/Reviews";
+import Contact from "../components/Homepage/Contact";
 
 const services = [
 	{ title: "UI/UX Design", image: UI, arrowImage: ArrowImage },
-	{ title: "Web Development", image: UI, arrowImage: ArrowImage },
-	{ title: "App Development", image: UI, arrowImage: ArrowImage },
+	{ title: "Web Design & Dev", image: UI, arrowImage: ArrowImage },
+	{ title: "Graphic Design", image: UI, arrowImage: ArrowImage },
 ];
 
 const marqueeItems = [
+	"Flyers",
+	"Logo",
+	"Music Covers",
+	"Mobile app/web Design",
+	"Business card",
+	"Product Design",
+	"Book cover",
+	"Framer",
 	"Flyers",
 	"Logo",
 	"Music Covers",
@@ -159,10 +170,10 @@ export default function Home() {
 			
 			transition={{ duration: 0.8 }}
 			variants={scrollAnimation}
-				className="min-h-[1354px] rounded-[16px] bg-secondaryLight px-[16px] py-[24px] lg:min-h-[785px]
+				className="min-h-[1354px]  rounded-[16px] bg-secondaryLight px-[16px] py-[24px] lg:min-h-[785px]
 					lg:rounded-[32px] lg:px-[160px] lg:py-[92px]"
 			>
-				<div className="flex flex-col lg:flex-row lg:items-center lg:gap-[128px]">
+				<div className="flex flex-col max-w-[1440px] mx-auto lg:flex-row lg:items-center lg:gap-[128px]">
 					<h2 className="font-space_grotesk text-[32px] font-bold text-white lg:text-[64px]">
 						My <span className="text-secondary">Services.</span>
 					</h2>
@@ -176,7 +187,7 @@ export default function Home() {
 				</div>
 
 				<div
-					className="mt-[6px] flex flex-col items-center gap-[28.01px] lg:mt-[64px] lg:flex-row
+					className="mt-[6px] flex flex-col max-w-[1440px] mx-auto items-center gap-[28.01px] lg:mt-[64px] lg:flex-row
 						lg:gap-[54px]"
 				>
 					{services.map((service, index) => (
@@ -187,7 +198,7 @@ export default function Home() {
 								lg:max-w-[337px]"
 						>
 							<div>
-								<h2 className="px-[35.1px] py-[32px] font-space_grotesk font-medium text-white">
+								<h2 className="px-[35.1px] lg:text-[28px] py-[32px] font-space_grotesk font-medium text-white">
 									{service.title}
 								</h2>
 								<hr className="w-full border-2 border-solid border-white/50" />
@@ -326,8 +337,17 @@ export default function Home() {
 					</Marquee>
 				</div>
 			</section>
-			<section>
-				<h2>Past Clients/Featured Works</h2>
+			<section className="lg:mt-[25.49px]">
+				<h2 className="font-dm_sans font-medium lg:text-[32px] lg:pl-[160px] text-[20px] pl-[17px] ">Past Clients/Featured Works</h2>
+				<div className="">
+					<ClientScroll/>
+				</div>
+				<div className="lg:mt-[44px] mt-[31px]">
+					<Reviews/>
+				</div>
+				<div className="lg:mt-[88px]">
+					<Contact/>
+				</div>
 			</section>
 		</div>
 	);

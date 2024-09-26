@@ -14,8 +14,8 @@ import Flyers from "/public/assests/Frame 3500.svg";
 import Website1 from "/public/assests/website2.svg";
 import Website2 from "/public/assests/OWINKS1 copy 1.svg";
 import Packaging from "/public/assests/Frame 3505.svg";
-import Music from "../_components/portfolio/Music";
-import Business from "../_components/portfolio/Business";
+import Music from "../../components/portfolio/Music";
+import Business from "../../components/portfolio/Business";
 
 const scrollAnimation = {
 	hidden: { opacity: 0, y: 100 },
