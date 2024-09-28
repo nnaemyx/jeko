@@ -47,7 +47,7 @@ const Contact = () => {
 						</div>
 						<div>
 							<p>Phone</p>
-							<input type="number" className=" border-b focus:outline-none bg-transparent border-[#09444A] border-solid" />
+							<input type="number" className="w-full border-b focus:outline-none bg-transparent border-[#09444A] border-solid" />
 						</div>
 					</div>
 					<div>

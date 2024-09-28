@@ -17,7 +17,7 @@ const Navbar = () => {
 	const navItems = [
 		{ label: "Home", path: "/" },
 		{ label: "About Us", path: "/about" },
-		{ label: "Contact Us", path: "/contact" },
+		{ label: "Contact Us", path: "#contact" },
 	];
 
 	const handleNavClick = (path: string) => {

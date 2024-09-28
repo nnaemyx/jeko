@@ -13,6 +13,8 @@ import Twitter from "/public/assests/Frame 3527.png";
 import Instagram from "/public/assests/Group 3459.png";
 import Linkedin from "/public/assests/Frame 3528.png";
 import UI from "/public/assests/Group 3435.svg";
+import Webdd from "/public/assests/web dd grp.svg";
+import Graphicdesign from "/public/assests/graphic design grp.svg";
 import ArrowImage from "/public/assests/Group 3484.svg";
 import Connect from "/public/assests/Group 3497.svg";
 import Desktopconnect from "/public/assests/Group 3495.svg";
@@ -24,11 +26,12 @@ import { ReactTyped } from "react-typed";
 import ClientScroll from "../components/Homepage/ClientScroll";
 import Reviews from "../components/Homepage/Reviews";
 import Contact from "../components/Homepage/Contact";
+import Link from "next/link";
 
 const services = [
 	{ title: "UI/UX Design", image: UI, arrowImage: ArrowImage },
-	{ title: "Web Design & Dev", image: UI, arrowImage: ArrowImage },
-	{ title: "Graphic Design", image: UI, arrowImage: ArrowImage },
+	{ title: "Web Design & Dev", image: Webdd, arrowImage: ArrowImage },
+	{ title: "Graphic Design", image: Graphicdesign, arrowImage: ArrowImage },
 ];
 
 const marqueeItems = [
@@ -63,7 +66,6 @@ export default function Home() {
 					lg:min-h-[522px]"
 				initial="hidden"
 				whileInView="visible"
-				
 				transition={{ duration: 0.8 }}
 				variants={scrollAnimation}
 			>
@@ -97,11 +99,13 @@ export default function Home() {
 				</div>
 			</motion.div>
 			<Navbar />
-			<motion.div initial="hidden"
+			<motion.div
+				initial="hidden"
 				whileInView="visible"
-				
 				transition={{ duration: 0.8 }}
-				variants={scrollAnimation} className="">
+				variants={scrollAnimation}
+				className=""
+			>
 				<div className="flex flex-col items-start lg:flex-row">
 					<div className="mt-[18px] px-[16px] lg:mt-[36.5px] xl:px-0 xl:pl-[160px]">
 						<div className="leading-[40px] lg:leading-[72px]">
@@ -134,12 +138,15 @@ export default function Home() {
 							and elevate brands to new heights.
 						</p>
 						<div className="mt-[20px] flex items-center gap-[5px]">
+							
 							<Button
 								className="px-[7px] py-[9px] text-[10px] lg:text-[16px] xl:px-[13.5px]"
 								text="Let’s create something extraordinary  together."
 								type="button"
 								variant="secondary"
 							/>
+							<Link href="#contact">
+							
 							<Button
 								className="px-[8px] py-[7px] text-[10px] lg:text-[16px] xl:px-[14.03px]"
 								variant="primary"
@@ -147,33 +154,39 @@ export default function Home() {
 								type="button"
 								text="Contact me"
 							/>
+							</Link>
 						</div>
 						<div className="mt-[12px] flex items-center gap-[7px] lg:mt-[29px]">
 							<h2 className="text-[12px] lg:font-medium">Check out my socials</h2>
 							<hr className="w-[92px] border-2 border-solid border-primary" />
 							<div className="flex items-center gap-[12px]">
-								<Image src={Instagram} alt="twitter icon" />
-								<Image src={Twitter} alt="twitter icon" />
-								<Image src={Linkedin} alt="twitter icon" />
+								<Link href="https://www.instagram.com/jeko_designstudio?igsh=MXhwYWZhZWp0ZGhzaw==" target="_blank">
+									<Image src={Instagram} alt="twitter icon" />
+								</Link>
+								<Link href="https://x.com/jeko_designs?t=j63Nu8PSIP5ADpxdz8Kfiw&s=09" target="_blank">
+									<Image src={Twitter} alt="twitter icon" />
+								</Link>
+								<Link href="https://www.linkedin.com/in/jeffery-nwankwo-53418323a/" target="_blank">
+									<Image src={Linkedin} alt="twitter icon" />
+								</Link>
 							</div>
 						</div>
 					</div>
-					<div className="-mt-[5rem] -z-10 max-w-[704px] lg:-mt-[10rem]">
+					<div className="-z-10 -mt-[5rem] max-w-[704px] lg:-mt-[10rem]">
 						<Image src={JeffImage} alt="Jeff picture" />
 					</div>
 				</div>
 			</motion.div>
 
 			<motion.div
-			initial="hidden"
-			whileInView="visible"
-			
-			transition={{ duration: 0.8 }}
-			variants={scrollAnimation}
-				className="min-h-[1354px]  rounded-[16px] bg-secondaryLight px-[16px] py-[24px] lg:min-h-[785px]
+				initial="hidden"
+				whileInView="visible"
+				transition={{ duration: 0.8 }}
+				variants={scrollAnimation}
+				className="min-h-[1354px] rounded-[16px] bg-secondaryLight px-[16px] py-[24px] lg:min-h-[785px]
 					lg:rounded-[32px] lg:px-[160px] lg:py-[92px]"
 			>
-				<div className="flex flex-col max-w-[1440px] mx-auto lg:flex-row lg:items-center lg:gap-[128px]">
+				<div className="mx-auto flex max-w-[1440px] flex-col lg:flex-row lg:items-center lg:gap-[128px]">
 					<h2 className="font-space_grotesk text-[32px] font-bold text-white lg:text-[64px]">
 						My <span className="text-secondary">Services.</span>
 					</h2>
@@ -187,8 +200,8 @@ export default function Home() {
 				</div>
 
 				<div
-					className="mt-[6px] flex flex-col max-w-[1440px] mx-auto items-center gap-[28.01px] lg:mt-[64px] lg:flex-row
-						lg:gap-[54px]"
+					className="mx-auto mt-[6px] flex max-w-[1440px] flex-col items-center gap-[28.01px]
+						lg:mt-[64px] lg:flex-row lg:gap-[54px]"
 				>
 					{services.map((service, index) => (
 						<div
@@ -198,7 +211,10 @@ export default function Home() {
 								lg:max-w-[337px]"
 						>
 							<div>
-								<h2 className="px-[35.1px] lg:text-[28px] py-[32px] font-space_grotesk font-medium text-white">
+								<h2
+									className="px-[35.1px] py-[32px] font-space_grotesk font-medium text-white
+										lg:text-[28px]"
+								>
 									{service.title}
 								</h2>
 								<hr className="w-full border-2 border-solid border-white/50" />
@@ -220,11 +236,13 @@ export default function Home() {
 				</div>
 			</motion.div>
 
-			<motion.div initial="hidden"
+			<motion.div
+				initial="hidden"
 				whileInView="visible"
-				
 				transition={{ duration: 0.8 }}
-				variants={scrollAnimation} className="px-[18px] py-[41px] lg:px-[168px]">
+				variants={scrollAnimation}
+				className="px-[18px] py-[41px] lg:px-[168px]"
+			>
 				<div className="flex flex-col gap-[11.98px] lg:flex-row">
 					<div>
 						<p className="font-dm_sans text-[20px] font-medium text-primary lg:text-[32px]">
@@ -338,15 +356,17 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="lg:mt-[25.49px]">
-				<h2 className="font-dm_sans font-medium lg:text-[32px] lg:pl-[160px] text-[20px] pl-[17px] ">Past Clients/Featured Works</h2>
+				<h2 className="pl-[17px] font-dm_sans text-[20px] font-medium lg:pl-[160px] lg:text-[32px]">
+					Past Clients/Featured Works
+				</h2>
 				<div className="">
-					<ClientScroll/>
+					<ClientScroll />
 				</div>
-				<div className="lg:mt-[44px] mt-[31px]">
-					<Reviews/>
+				<div className="mt-[31px] lg:mt-[44px]">
+					<Reviews />
 				</div>
-				<div className="lg:mt-[88px]">
-					<Contact/>
+				<div className="lg:mt-[88px]" id="contact">
+					<Contact />
 				</div>
 			</section>
 		</div>
