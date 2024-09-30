@@ -145,7 +145,7 @@ export default function Home() {
 								type="button"
 								variant="secondary"
 							/>
-							<Link href="#contact">
+							<Link href="https://wa.me/2347069917630" target="_blank">
 							
 							<Button
 								className="px-[8px] py-[7px] text-[10px] lg:text-[16px] xl:px-[14.03px]"

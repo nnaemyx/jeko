@@ -8,6 +8,7 @@ import Mavlaymock from "/public/assests/MAV LAYMOCK 2.svg";
 import Lizu from "/public/assests/Frame 3478.svg";
 import Kedu from "/public/assests/clientimage.jpg";
 import Button from "@/constants/atoms/button";
+import Link from "next/link";
 
 // Array of image URLs
 const marqueeImages = [
@@ -32,22 +33,40 @@ const ClientScroll = () => {
 									height={540}
 									src={marqueeImage.image}
 									alt={`Item ${index + 1}`}
-									className="object-contain w-[328px] h-[160px] lg:w-[956px] lg:h-[540px]"
+									className="h-[160px] w-[328px] object-contain lg:h-[540px] lg:w-[956px]"
 								/>
 							</div>
 						))}
 					</div>
 				</Marquee>
 			</div>
-            <div className="lg:mt-[65px] px-[16px] lg:px-0 flex justify-center lg:flex-row lg:items-center lg:gap-[220px]  flex-col">
-                <div>
-                    <p className="font-dm_sans text-primary text-[12px] lg:text-[20px]">Trusted by industry leaders and innovative brands.</p>
-                </div>
-                <div className="flex items-center gap-[13.47px] mt-[11px] lg:mt-0">
-                    <Button text="Interested in joining this list?" variant="secondary" className="px-[42.5px] py-[7px] text-[10px] lg:px-[22px] lg:py-[10.5px] lg:text-[20px] font-dm_sans font-medium"/>
-                    <Button withArrow variant="primary" text="Contact me" className="lg:py-[13.5px] lg:px-[14.03px] px-[14.9px] py-[7px] text-[10px] lg:text-[16px]"/>
-                </div>
-            </div>
+			<div
+				className="flex flex-col justify-center px-[16px] lg:mt-[65px] lg:flex-row lg:items-center
+					lg:gap-[220px] lg:px-0"
+			>
+				<div>
+					<p className="font-dm_sans text-[12px] text-primary lg:text-[20px]">
+						Trusted by industry leaders and innovative brands.
+					</p>
+				</div>
+				<div className="mt-[11px] flex items-center gap-[13.47px] lg:mt-0">
+					<Button
+						text="Interested in joining this list?"
+						variant="secondary"
+						className="px-[42.5px] py-[7px] font-dm_sans text-[10px] font-medium lg:px-[22px]
+							lg:py-[10.5px] lg:text-[20px]"
+					/>
+					<Link href="https://wa.me/2347069917630" target="_blank">
+						<Button
+							withArrow
+							variant="primary"
+							text="Contact me"
+							className="px-[14.9px] py-[7px] text-[10px] lg:px-[14.03px] lg:py-[13.5px]
+								lg:text-[16px]"
+						/>
+					</Link>
+				</div>
+			</div>
 		</>
 	);
 };

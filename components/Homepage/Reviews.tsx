@@ -6,33 +6,25 @@ import Image from "next/image";
 const reviews = [
   {
     image: "/path/to/reviewer1.jpg", // Replace with actual image path
-    name: "John Doe",
-    title: "CEO at Example Corp",
+    name: "Mr Elvis Alakija",
+    title: "CEO, July Drama Logistics",
+    review:
+      "Jeff's ability to create compelling designs with minimal information is truly impressive. He has a knack for understanding the essence of a brand and translating it into visually appealing materials. The flyers he designed for our company were not only eye-catching but also effective in conveying our message. I highly recommend Jeff to anyone in need of a talented and efficient digital designer",
+  },
+  {
+    image: "/path/to/reviewer2.jpg",
+    name: "Charles-Mary .C.",
+    title: "CEO PrinceWisdom MC services",
     review:
       "Working with Jeff was a transformative experience for my brand. From the very beginning, He took the time to understand our unique needs and goals, and his creativity brought our vision to life in ways I couldn’t have imagined. The design process was collaborative and smooth, and the final product was stunning.",
   },
   {
     image: "/path/to/reviewer2.jpg",
-    name: "Jane Smith",
-    title: "Marketing Lead at Brand Co",
+    name: "Angela Queen",
+    title: "CEO New Era Groceries Store",
     review:
-      "Working with Jeff was a transformative experience for my brand. From the very beginning, He took the time to understand our unique needs and goals, and his creativity brought our vision to life in ways I couldn’t have imagined. The design process was collaborative and smooth, and the final product was stunning.",
+      "As a busy CEO, I don't have time to micromanage every detail of a project. That's why I was so impressed with Jeko Design Studio. They not only understood my vision but also took the initiative to ensure that every aspect of the design was executed flawlessly. Their attention to detail and commitment to quality were truly exceptional. I'm so grateful for their work.",
   },
-  {
-    image: "/path/to/reviewer2.jpg",
-    name: "Jane Smith",
-    title: "Marketing Lead at Brand Co",
-    review:
-      "Working with Jeff was a transformative experience for my brand. From the very beginning, He took the time to understand our unique needs and goals, and his creativity brought our vision to life in ways I couldn’t have imagined. The design process was collaborative and smooth, and the final product was stunning.",
-  },
-  {
-    image: "/path/to/reviewer2.jpg",
-    name: "Jane Smith",
-    title: "Marketing Lead at Brand Co",
-    review:
-      "Working with Jeff was a transformative experience for my brand. From the very beginning, He took the time to understand our unique needs and goals, and his creativity brought our vision to life in ways I couldn’t have imagined. The design process was collaborative and smooth, and the final product was stunning.",
-  },
-  // Add more reviews as needed
 ];
 
 const Reviews = () => {

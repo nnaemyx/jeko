@@ -16,6 +16,7 @@ import Website2 from "/public/assests/OWINKS1 copy 1.svg";
 import Packaging from "/public/assests/Frame 3505.svg";
 import Music from "../../components/portfolio/Music";
 import Business from "../../components/portfolio/Business";
+import Link from "next/link";
 
 const scrollAnimation = {
 	hidden: { opacity: 0, y: 100 },
@@ -167,12 +168,14 @@ const Page = () => {
 								leader among its competitors, ready to navigate the fast paced world of digital
 								currencies with confidence and clarity.
 							</p>
-							<Button
-								withArrow
-								text="See case study"
-								className="mt-[9px] px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
-									lg:mt-[35px] lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
-							/>
+							<Link href="https://www.behance.net/gallery/208477581/Maverick-exchange-Logo-design/modules/1184171783">
+								<Button
+									withArrow
+									text="See case study"
+									className="mt-[9px] px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
+										lg:mt-[35px] lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
+								/>
+							</Link>
 						</div>
 						<div className="w-full">
 							<Image src={DesktopManverickimage} alt="maverick logo" className="hidden lg:flex" />
@@ -210,12 +213,14 @@ const Page = () => {
 								this logo a perfect representation of a catering service that prides itself on
 								excellence and customer satisfaction.
 							</p>
-							<Button
-								withArrow
-								text="See case study"
-								className="mt-[9px] px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
-									lg:mt-[35px] lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
-							/>
+							<Link href="https://www.behance.net/nwankwojeffery">
+								<Button
+									withArrow
+									text="See case study"
+									className="mt-[9px] px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
+										lg:mt-[35px] lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
+								/>
+							</Link>
 						</div>
 						<div className="w-full">
 							<Image src={DesktopInstagram} alt="maverick logo" className="hidden lg:flex" />
@@ -224,12 +229,14 @@ const Page = () => {
 					</div>
 				</div>
 				<div className="mt-[23px] lg:mt-[35px]">
-					<Button
-						withArrow
-						text="See more logo and branding"
-						className="mx-auto px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
-							lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
-					/>
+					<Link href="https://dribbble.com/Jeff3ry">
+						<Button
+							withArrow
+							text="See more logo and branding"
+							className="mx-auto px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
+								lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
+						/>
+					</Link>
 				</div>
 			</motion.div>
 			<motion.div
@@ -249,12 +256,14 @@ const Page = () => {
 					<Image src={Flyers} alt="flyers" />
 				</div>
 				<div className="mt-[26px] lg:mt-[62px]">
-					<Button
-						withArrow
-						text="See more Flyers"
-						className="mx-auto px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
-							lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
-					/>
+					<Link href="https://dribbble.com/Jeff3ry">
+						<Button
+							withArrow
+							text="See more Flyers"
+							className="mx-auto px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
+								lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
+						/>
+					</Link>
 				</div>
 			</motion.div>
 			<motion.div
@@ -320,8 +329,9 @@ const Page = () => {
 								font-dm_sans lg:flex lg:flex-row lg:pl-[160px] lg:pr-[135px]"
 						>
 							<div className="lg:text-[24px]">
-								<p>Client: VeriPay Fx </p>
-								<p>Industry: FinTech</p>
+								<p>Client:  Uzommiri Study center
+								 </p>
+								<p>Industry: N.G.O</p>
 							</div>
 							<div className="lg:text-[24px]">
 								<p>Job done: Fully functional and responsive </p>
@@ -372,12 +382,15 @@ const Page = () => {
 					<Image src={Packaging} alt="packaging image" />
 				</div>
 				<div className="mt-[23px] lg:mt-[62px]">
+					<Link href="https://dribbble.com/Jeff3ry">
+					
 					<Button
 						withArrow
 						text="See more Packaging designs"
 						className="mx-auto px-[13.19px] py-[7px] font-dm_sans text-[10px] font-medium
 							lg:px-[26.03px] lg:py-[13.5px] lg:text-[16px]"
 					/>
+					</Link>
 				</div>
 			</motion.div>
 			<motion.div
@@ -385,7 +398,7 @@ const Page = () => {
 				whileInView="visible"
 				transition={{ duration: 0.8 }}
 				variants={scrollAnimation}
-				className="lg:mt-[86px] mt-[54px]"
+				className="mt-[54px] lg:mt-[86px]"
 			>
 				<Music />
 			</motion.div>
@@ -394,7 +407,7 @@ const Page = () => {
 				whileInView="visible"
 				transition={{ duration: 0.8 }}
 				variants={scrollAnimation}
-				className="lg:mt-[86px] mt-[54px]"
+				className="mt-[54px] lg:mt-[86px]"
 			>
 				<Business />
 			</motion.div>

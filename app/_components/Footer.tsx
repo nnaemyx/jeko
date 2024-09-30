@@ -14,12 +14,14 @@ const Footer = () => {
 				<h1 className="font-space_grotesk text-[20px] font-[400] lg:text-[60px]">
 					Ready to get started?
 				</h1>
-				<Button
-					text="Hire me"
-					variant="primary"
-					withArrow
-					className="px-[23.69px] py-[7px] font-dm_sans text-[10px] font-medium lg:text-[16px]"
-				/>
+				<Link href="https://wa.me/2347069917630" target="_blank">
+					<Button
+						text="Hire me"
+						variant="primary"
+						withArrow
+						className="px-[23.69px] py-[7px] font-dm_sans text-[10px] font-medium lg:text-[16px]"
+					/>
+				</Link>
 			</div>
 			<div className="mt-[37.66px] flex items-center justify-between lg:items-baseline">
 				<div className="space-y-[13.65px]">
